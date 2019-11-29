@@ -1,0 +1,39 @@
+{
+  "name": "laravel-mix-modernizr",
+  "version": "1.0.0-alpha",
+  "description": "Extension for Laravel Mix that provides Modernizr support.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marceickhoff/laravel-mix-modernizr.git"
+  },
+  "author": {
+    "name": "Marc Eickhoff",
+    "email": "mail@marceickhoff.com",
+    "url": "https://marceickhoff.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marceickhoff/laravel-mix-modernizr/issues"
+  },
+  "homepage": "https://github.com/marceickhoff/laravel-mix-modernizr#readme",
+  "dependencies": {
+    "escape-string-regexp": "^2.0.0",
+    "laravel-mix": "^5.0.0",
+    "webpack-modernizr-loader": "^5.0.0"
+  },
+  "keywords": [
+    "laravel",
+    "mix",
+    "laravel-mix",
+    "plugin",
+    "extension",
+    "modernizr",
+    "webpack-modernizr-loader",
+    "webpack",
+    "webpack-cli"
+  ]
+}
