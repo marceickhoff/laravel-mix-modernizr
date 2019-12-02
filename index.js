@@ -20,32 +20,47 @@ class Modernizr {
 	 * @return {void}
 	 */
 	register(configFiles) {
+		// Set default identifier if none provided
 		if (typeof configFiles === 'undefined') configFiles = { Modernizr: '.modernizrrc' };
 
+		// Holds file filter regex strings
 		let regexStrings = [];
+
+		// Webpack variables
 		let autoload = {};
 		let alias = {};
+
+		// Iterate over every provided config file
 		Object.keys(configFiles).forEach(key => {
 			let file = configFiles[key];
+
+			// Create config file if it doesn't exist
 			if (!fs.existsSync(file)) {
 				fs.writeFile(file, ('module.exports = ' + JSON.stringify({
 					"options": [],
 					"feature-detects": []
 				}, null, 2) + ';'), console.error);
 			}
+
+			// Add escaped file name to regex strings
 			regexStrings.push(escapeStringRegexp(file));
 
+			// Set alias and autoload for this build
 			alias[key] = path.resolve(configFiles[key]);
 			autoload[key] = key;
 		});
 
-		this.test = regexStrings.join('|');
+		// Set Webpack test
+		this.test = new RegExp(regexStrings.join('|'));
 
+		// Add aliases for Modernizr builds so they can be called by the provided identifier
 		mix.webpackConfig({
 			resolve: {
 				alias: alias
 			}
 		});
+
+		// Register autoloading of Modernizr builds
 		mix.autoload(autoload);
 	}
 
@@ -56,7 +71,7 @@ class Modernizr {
 	 */
 	webpackRules() {
 		return {
-			test: new RegExp(this.test),
+			test: this.test,
 			loader: 'webpack-modernizr-loader'
 		}
 	}
