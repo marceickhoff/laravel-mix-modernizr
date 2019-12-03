@@ -30,7 +30,7 @@ mix
   .modernizr()
 ```
 
-This will use or create a .modernizrrc file in your project root and make the corresponding custom build instantly accessible via a `Modernizr` global identifier when your run Mix.
+This will use or create a .modernizrrc file in your project root and make the corresponding custom build instantly accessible via a `Modernizr` global identifier when you run Mix.
 
 Now, set the Modernizr configurations to your liking, for example:
 
