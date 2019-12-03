@@ -5,6 +5,8 @@
 
 This extension adds support for [Modernizr](https://github.com/Modernizr/Modernizr) to [Laravel Mix](https://github.com/JeffreyWay/laravel-mix) by using the [webpack-modernizr-loader](https://github.com/itgalaxy/webpack-modernizr-loader).
 
+It allows you to easily configure, create and manage custom Modernizr builds in your Laravel Mix project.
+
 ## Installation
 
 ```
@@ -75,7 +77,7 @@ Modernizr.addTest(/* ... */);
 
 ## Advanced Usage
 
-You can also use custom configuration files and global identifiers to maintain multiple different Modernizr builds in your project:
+You can also use non-standard configuration file locations and custom global identifiers to maintain multiple different Modernizr builds in your project:
 
 ```javascript
 /* 
