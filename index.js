@@ -1,5 +1,6 @@
 const mix = require('laravel-mix');
 const fs = require('fs');
+const path = require('path');
 const escapeStringRegexp = require('escape-string-regexp');
 
 class Modernizr {
