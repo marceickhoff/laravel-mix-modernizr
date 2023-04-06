@@ -11,7 +11,7 @@ class Modernizr {
 	 * @return {Array}
 	 */
 	dependencies() {
-		return ['webpack-modernizr-loader', 'escape-string-regexp'];
+		return ['@sect/modernizr-loader', 'escape-string-regexp'];
 	}
 
 	/**
@@ -73,7 +73,7 @@ class Modernizr {
 	webpackRules() {
 		return {
 			test: this.test,
-			loader: 'webpack-modernizr-loader'
+			loader: '@sect/modernizr-loader'
 		}
 	}
 }
