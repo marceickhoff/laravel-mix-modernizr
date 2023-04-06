@@ -22,10 +22,10 @@
   "homepage": "https://github.com/marceickhoff/laravel-mix-modernizr#readme",
   "dependencies": {
     "escape-string-regexp": "^2.0.0",
-    "webpack-modernizr-loader": "^5.0.0"
+    "@sect/modernizr-loader": "^1.0.4"
   },
   "devDependencies": {
-    "laravel-mix": "^5.0.0"
+    "laravel-mix": "^6.0.0"
   },
   "keywords": [
     "laravel",
