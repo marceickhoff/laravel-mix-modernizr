@@ -22,7 +22,7 @@ class Modernizr {
 	 */
 	register(configFiles) {
 		// Set default identifier if none provided
-		if (typeof configFiles === 'undefined') configFiles = { Modernizr: '.modernizrrc' };
+		if (typeof configFiles === 'undefined') configFiles = { modernizr: '.modernizrrc' };
 
 		// Holds file filter regex strings
 		let regexStrings = [];
